@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <title>Music Player</title>
+</head>
+<body>
+    <div class="container flex bg-black">
+        <div class="left">
+            <img class="invert close" src="img/close.svg" alt="close">
+            <div class="options bg-grey rounded m-1 p-1">
+            <div class="logo"><img class="invert" src="img/music-party-svgrepo-com.svg" alt="logo">Music</div>
+            <ul>
+                <li><img class="invert" src="img/home.svg" alt="home">Home</li>
+                <li><img class="invert" src="img/search.svg" alt="search">Search</li>
+            </ul>
+        </div>
+        <div class="library bg-grey rounded m-1 p-1">
+            <div class="heading">
+                <img class="invert" src="img/playlist.svg" alt="playlist">
+                <h3>Your Library</h3>
+            </div>
+            <div class="songslist">
+                <ul>
+                    
+                </ul>
+            </div>
+            <div class="footer">
+                <div><a href="/"><span>Legal</span></a></div>
+                <div><a href="/"><span>Privacy Center</span></a></div>
+                <div><a href="/"><span>Privacy Policy</span></a>
+                </div>
+                <div><a href="/"><span>Cookies</span></a></div>
+                <div><a href="/"><span>About Ads</span></a></div>
+                <div><a href="/"><span>Accessibility</span></a></div>
+            </div>
+        </div>
+    </div>
+        <div class="right bg-ligrey">
+            <div class="header bg-grey">
+                <div class="nav">  
+                        <img class="invert hamburger" src="img/hamburger.svg" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 7L10 12L15 17" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none">
+                        <path d="M10 7L15 12L10 17" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                </div>
+                <div class="button">
+                    <button class="signup-btn">sign up</button>
+                    <button class="login-btn">log in</button>
+                </div>
+            </div>
+            <div class="playlists">
+                <h3>Music playlists</h3>
+                <div class="cardContainer">                
+                    
+                </div>
+            </div>
+            <div class="playbar">
+                <div class="song-details">
+                  <div class="songinfo">Song Name</div>
+                  <div class="songtime">00:00 / 00:00</div>
+                </div>
+              
+                <div class="bar">
+                  <div class="seekbar">
+                    <div class="progress"></div>
+                    <div class="circle" style="left: 0%"></div>
+                  </div>
+                </div>
+                
+                <div class="level">
+
+                <div class="song-btn">
+                  <img id="previous" class="invert" src="img/prevsong.svg" alt="previous song">
+                  <img id="play" class="invert" src="img/play.svg" alt="play song">
+                  <img id="next" class="invert" src="img/nextsong.svg" alt="next song">
+                </div>
+
+                <div class="volume-container">
+                    <img src="img/volume.svg" alt="volume" class="volume-icon" id="Volume">
+                        <input type="range" class="range">
+                  </div>
+                  
+                </div>
+                
+              </div>              
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

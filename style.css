@@ -1,0 +1,530 @@
+/* Import Google Fonts: Martel Sans, Poppins, and Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Define root variables */
+:root {
+    --a: 0; /* Custom property to control play button opacity */
+}
+
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Sidebar (left) settings */
+.left {
+    width: 25vw;
+}
+
+/* Hide close button initially */
+.close {
+    display: none;
+}
+
+/* Logo section */
+.logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 900;
+    color: #c4c1c1;
+}
+
+.logo img {
+    width: 50px;
+    padding-right: 15px;
+}
+
+/* Main content (right) */
+.right {
+    width: 75vw;
+}
+
+/* Sidebar menu options */
+.options ul li {
+    width: 15px;
+    list-style: none;
+    display: flex;
+    padding-top: 15px;
+    gap: 15px;
+    font-weight: bold;
+}
+
+/* Library styling */
+.library {
+    height: 83vh;
+    position: relative;
+}
+
+/* Library heading */
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 13px;
+    padding: 15px 10px;
+}
+
+.heading img {
+    width: 25px;
+}
+
+/* Footer links inside sidebar */
+.footer {
+    display: flex;
+    font-size: 10px;
+    gap: 13px;
+    position: absolute;
+    bottom: 10px;
+    padding: 10px 30px;
+}
+
+.footer a {
+    color: grey;
+}
+
+/* Top header on right side */
+.right {
+    margin: 5px 0;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+
+/* Navigation buttons (back, forward) */
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+    display: none;
+    padding-right: 15px;
+}
+
+/* Padding for all header children */
+.header > * {
+    padding: 10px;
+}
+
+/* Playlist section */
+.playlists {
+    padding: 20px;
+}
+
+/* Container for multiple cards */
+.cardContainer {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+/* Individual card (playlist) */
+.play-card {
+    width: 150px;
+    padding: 10px;
+    background-color: #161616;
+    position: relative;
+    transition: all 1s;
+}
+
+.play-card > * {
+    margin-top: 5px;
+}
+
+.play-card p {
+    font-size: small;
+}
+
+.play-card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+/* Hover effect on card */
+.play-card:hover {
+    background-color: #535353;
+    cursor: pointer;
+    --a: 1; /* Make play button visible */
+}
+
+/* Play button inside card */
+.play {
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    top: 123px;
+    right: 17px;
+    opacity: var(--a);
+    transition: all 1s ease-out;
+}
+
+/* Play icon */
+.play-butn {
+    width: 60%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    filter: brightness(0); /* make it black */
+}
+
+/* Buttons (Sign Up and Login) */
+.button > * {
+    margin: 0 12px;
+}
+
+/* Sign Up button */
+.signup-btn {
+    background-color: #121212;
+    color: white;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.signup-btn:hover {
+    font-size: 17px;
+    color: rgb(71, 69, 69);
+}
+
+/* Login button */
+.login-btn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    width: 85px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.login-btn:hover {
+    background-color: #121212;
+    color: rgb(71, 69, 69);
+}
+
+/* Bottom playbar */
+.playbar {
+    position: fixed;
+    bottom: 0;
+    width: 75%;
+    padding: 20px 0;
+    background-color: #121212;
+}
+
+/* Controls for play/pause/next */
+.song-btn {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
+.song-btn img {
+    width: 20px;
+    cursor: pointer;
+}
+
+/* Progress bar container */
+.bar {
+    display: flex;
+    justify-content: center;
+}
+
+/* Seekbar background */
+.seekbar {
+    height: 4px;
+    background-color: #535353;
+    width: 90%;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+/* Filled progress inside seekbar */
+.progress {
+    background-color: #ffffff;
+    height: 100%;
+    width: 0%;
+    border-radius: 2px;
+    position: relative;
+}
+
+/* Circle on progress bar */
+.circle {
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 0%;
+    transition: left 0.2s linear;
+    pointer-events: none;
+}
+
+/* Hover effect on seekbar */
+.seekbar:hover .progress {
+    background-color: #535353;
+}
+
+.seekbar:hover .circle {
+    background-color: #535353;
+}
+
+/* Volume control section */
+.volume-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 150px;
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 47px;
+}
+
+/* Volume icon */
+.volume-icon {
+    width: 20px;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/* Volume slider styling */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(to right, #ffffff 0%, #ffffff 50%, #535353 50%, #535353 100%);
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Thumb for slider */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Firefox thumb */
+input[type="range"]::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+/* Remove Firefox range track background */
+input[type="range"]::-moz-range-track {
+    background: transparent;
+}
+
+/* Remove outline when focused */
+input[type="range"]:focus {
+    outline: none;
+}
+
+/* Song list */
+.songslist {
+    padding: 0 10px;
+    max-height: 65vh;
+    overflow-y: scroll;
+}
+
+/* Individual song item */
+.songslist ul li {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    align-items: center;
+    border: 1px solid #ffffff;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    justify-content: space-around;
+}
+
+/* Play now section inside list */
+.playNow {
+    font-size: 12px;
+    display: flex;
+    width: 100px;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.playNow img {
+    width: 20px;
+}
+
+/* Info about song title */
+.info div:first-child {
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+    font-size: 13px;
+}
+
+/* Info about artist */
+.info div:nth-child(2) {
+    padding: 5px 0;
+    font-size: 10px;
+}
+
+/* Song currently playing info */
+.songinfo {
+    width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 2px;
+    position: relative;
+    font-weight: bold;
+}
+
+/* Song time and controls */
+.song-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+/* Song timing */
+.songtime {
+    padding-right: 12px;
+}
+
+/* Responsive design for smaller screens */
+    /* Your media query rules will go here */
+
+@media (max-width: 1200px){
+    .left{
+        position: absolute;
+        left: -130%;
+        transition: all 0.3s ease-in-out;
+        z-index: 3;
+        position: fixed;
+        top: 0;
+        width: 350px;
+    }
+
+    .right{
+        width: 100%;
+    }
+
+    .playbar{
+        width: 100vw;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .close{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 500px){
+    .song-details{
+        padding: 0 15px;
+    }
+
+    .songinfo{
+        width: 50%;
+    }
+
+    .songtime{
+        font-size: 12px;
+    }
+
+    .play-card{
+        width:300px;
+        padding: 20px;
+        background-color: #161616;
+        position: relative;
+    }
+
+    .play-card > *{
+        margin-top: 10px;
+    }
+    
+    .play-card h4{
+        font-size: 35px;
+    }
+
+    .play-card p{
+        font-size: 17px;
+    }
+    
+    .play-card img{
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    .cardContainer{
+        max-height: 80vh;
+    }
+
+     /* Style the range itself */
+input[type="range"] {
+    display: none;
+  }
+      .volume-container{
+        position: absolute;
+        bottom: 10px;
+        right: -65px;
+      }
+    
+}
